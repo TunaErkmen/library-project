@@ -1,0 +1,20 @@
+<h1>Books is in our DB</h1>
+
+{{#each books }}
+
+<section class="book-summary">
+
+<h1>{{title}}</h1>
+
+<p>
+    Author: {{author}} <br>
+    Rating: {{rating}} <br>
+<a href="/books/{{this._id}}">More details</a>
+<a href="/books/{{this._id}}/edit">Edit</a>
+</p>
+
+<form action="/books/{{_id}}/delete" method="POST">
+      <button>Delete</button>
+    </form>
+</section>
+{{/each}}
